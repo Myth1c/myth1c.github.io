@@ -22,7 +22,9 @@
             </ul>
         </nav>
     </header>
-
+    <div id="background-overlay">
+        <div id="background-darken"></div>
+    </div>
     <main>
         <section id="hero" style="text-align: center;">
             <h2>Welcome to My Portfolio</h2>
@@ -56,11 +58,11 @@
                 <li style="width: 50%;">Project Management</li>
             </ul>
         </section>
-
-        <section id="projects" style="text-align: center;"class="projects-container">
+        
+        <section id="projects" style="text-align: center;" class="projects-container">
             <h2>Projects</h2>
             <div class="project-list">
-                <div id="project1" class="project">
+                <div id="project1" class="project" data-bg="images/project1-image1.png">
                     <h3>Stellar Space Crew</h3>
                     <p>A group project in which I handled a lot of the back-end development and the various systems in the game.</p>
                     <div class="project-images slideshow" data-project="1">
@@ -72,7 +74,7 @@
                     </div>
                     <a href="https://github.com/Myth1c/StellarSpaceCrew" target="_blank">View Project</a>
                 </div>
-                <div id="project2" class="project">
+                <div id="project2" class="project" data-bg="images/project2-image1.png">
                     <h3>The Alchemy Mod</h3>
                     <p>A mod I wrote from scratch in Lua for the popular sandbox game, Garry's Mod. This was something I did as a project for College to help me learn a different programming language.</p>
                     <div class="project-images slideshow" data-project="2">
