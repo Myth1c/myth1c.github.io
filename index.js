@@ -21,3 +21,25 @@ const observer = new IntersectionObserver(
 document.querySelectorAll('.project').forEach(section => {
   observer.observe(section);
 });
+
+const slideIndices = [0, 0]; // One index per project
+
+function plusSlide(n, projectIndex) {
+  const slideshows = document.querySelectorAll(".project-images.slideshow");
+  const slides = slideshows[projectIndex].querySelectorAll(".slide");
+  slideIndices[projectIndex] += n;
+
+  if (slideIndices[projectIndex] >= slides.length) {
+    slideIndices[projectIndex] = 0;
+  }
+  if (slideIndices[projectIndex] < 0) {
+    slideIndices[projectIndex] = slides.length - 1;
+  }
+
+  slides.forEach((slide, i) => {
+    slide.classList.remove("active");
+    if (i === slideIndices[projectIndex]) {
+      slide.classList.add("active");
+    }
+  });
+}
