@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
     window.addEventListener('load', updateBackground);
 });
 
-const slideIndices = [0, 0]; // One index per project
+const slideIndices = [0, 0, 0]; // One index per project
 
 function plusSlide(n, projectIndex) {
   const slideshows = document.querySelectorAll(".project-images.slideshow");
